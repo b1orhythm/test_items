@@ -4,8 +4,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-@pytest.mark.parametrize('book', ["the-cathedral-the-bazaar_190", "coders-at-work_207"])
-def test_check_button(browser, book):
+@pytest.mark.parametrize('book', ["coders-at-work_207", "the-cathedral-the-bazaar_190"])
+def test_check_button_add_to_basket(browser, book):
     browser.get(f"http://selenium1py.pythonanywhere.com/catalogue/{book}/")
     btn_presence = None
     try:
